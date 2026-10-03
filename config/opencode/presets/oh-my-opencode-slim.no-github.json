@@ -1,0 +1,65 @@
+{
+  "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
+  "preset": "9router",
+  "presets": {
+    "9router": {
+      "orchestrator": {
+        "model": "9router/go-reasoning",
+        "variant": "high",
+        "skills": ["*"],
+        "mcps": [
+          "serena",
+          "ripgrep",
+          "context7",
+          "gh_grep"
+        ]
+      },
+      "oracle": {
+        "model": "9router/critical-glm",
+        "variant": "high",
+        "skills": ["simplify"],
+        "mcps": [
+          "serena",
+          "ripgrep"
+        ]
+      },
+      "librarian": {
+        "model": "9router/go-fast",
+        "variant": "high",
+        "skills": [],
+        "mcps": [
+          "serena",
+          "ripgrep",
+          "context7",
+          "gh_grep"
+        ]
+      },
+      "explorer": {
+        "model": "9router/free-fast",
+        "variant": "low",
+        "skills": [],
+        "mcps": [
+          "ripgrep",
+          "serena"
+        ]
+      },
+      "designer": {
+        "model": "9router/vision-design",
+        "variant": "medium",
+        "skills": [],
+        "mcps": [
+          "serena"
+        ]
+      },
+      "fixer": {
+        "model": "9router/go-coding",
+        "variant": "high",
+        "skills": [],
+        "mcps": [
+          "serena",
+          "ripgrep"
+        ]
+      }
+    }
+  }
+}

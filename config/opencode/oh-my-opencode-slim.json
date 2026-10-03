@@ -1,0 +1,146 @@
+{
+  "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
+  "preset": "java-spring-legacy",
+  "presets": {
+    "java-spring-legacy": {
+      "orchestrator": {
+        "model": [
+          {
+            "id": "github-copilot/claude-opus-5.5",
+            "variant": "high"
+          },
+          {
+            "id": "github-copilot/claude-sonnet-5.5",
+            "variant": "high"
+          },
+          {
+            "id": "9router/go-reasoning",
+            "variant": "high"
+          }
+        ],
+        "skills": [
+          "*",
+          "!clonedeps"
+        ],
+        "skills_include_local": true,
+        "mcps": [
+          "serena",
+          "ripgrep",
+          "context7",
+          "gh_grep"
+        ]
+      },
+      "oracle": {
+        "model": [
+          {
+            "id": "github-copilot/gpt-5.5",
+            "variant": "high"
+          },
+          {
+            "id": "github-copilot/claude-sonnet-5.5",
+            "variant": "high"
+          },
+          {
+            "id": "9router/critical-glm",
+            "variant": "high"
+          }
+        ],
+        "skills": [
+          "simplify",
+          "deepwork",
+          "verification-planning",
+          "reflect"
+        ],
+        "skills_include_local": true,
+        "mcps": [
+          "serena",
+          "ripgrep",
+          "context7",
+          "gh_grep"
+        ]
+      },
+      "librarian": {
+        "model": [
+          {
+            "id": "github-copilot/gpt-5-mini",
+            "variant": "medium"
+          },
+          {
+            "id": "9router/go-fast",
+            "variant": "high"
+          }
+        ],
+        "skills": [],
+        "mcps": [
+          "context7",
+          "gh_grep"
+        ]
+      },
+      "explorer": {
+        "model": [
+          {
+            "id": "github-copilot/gpt-5-mini",
+            "variant": "low"
+          },
+          {
+            "id": "9router/free-fast",
+            "variant": "low"
+          }
+        ],
+        "skills": [
+          "codemap"
+        ],
+        "mcps": [
+          "serena",
+          "ripgrep"
+        ]
+      },
+      "designer": {
+        "model": [
+          {
+            "id": "github-copilot/claude-sonnet-5.5",
+            "variant": "high"
+          },
+          {
+            "id": "9router/vision-design",
+            "variant": "medium"
+          }
+        ],
+        "skills": [
+          "verification-planning"
+        ],
+        "skills_include_local": true,
+        "mcps": [
+          "serena",
+          "context7"
+        ]
+      },
+      "fixer": {
+        "model": [
+          {
+            "id": "github-copilot/claude-sonnet-5.5",
+            "variant": "high"
+          },
+          {
+            "id": "github-copilot/gpt-5.5",
+            "variant": "high"
+          },
+          {
+            "id": "9router/go-coding",
+            "variant": "high"
+          }
+        ],
+        "skills": [
+          "simplify",
+          "verification-planning"
+        ],
+        "skills_include_local": true,
+        "mcps": [
+          "serena",
+          "ripgrep"
+        ]
+      }
+    }
+  }
+}
+

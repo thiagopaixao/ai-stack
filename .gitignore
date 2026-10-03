@@ -1,0 +1,19 @@
+# Secrets
+secrets.env
+.env
+*.env
+!.env.example
+auth.json
+
+# Runtime / generated
+node_modules/
+*.log
+*.bak
+*.before-9router*
+workspaces/
+backup/
+memory/
+indexes/
+
+# OS
+.DS_Store

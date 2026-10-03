@@ -1,0 +1,64 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "9router": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "9Router",
+      "options": {
+        "baseURL": "http://127.0.0.1:20128/v1",
+	"apiKey": "{env:NINEROUTER_API_KEY}"
+      },
+      "models": {
+        "free-fast": {
+          "name": "Free Fast"
+        },
+        "go-fast": {
+          "name": "Go Fast"
+        },
+        "go-coding": {
+          "name": "Go Coding"
+        },
+        "go-reasoning": {
+          "name": "Go Reasoning"
+        },
+        "critical-glm": {
+          "name": "Critical GLM"
+        },
+        "vision-design": {
+          "name": "Vision Design"
+        }
+      }
+    }
+  },
+  "mcp": {
+    "serena": {
+      "type": "local",
+      "command": [
+        "serena",
+        "start-mcp-server",
+        "--project-from-cwd"
+      ],
+      "enabled": true
+    },
+    "ripgrep": {
+      "type": "local",
+      "command": [
+        "node",
+        "__AI_STACK_HOME__/platform/mcp/node_modules/mcp-ripgrep/dist/index.js"
+      ],
+      "enabled": true
+    }
+  },
+  "plugin": [
+    "oh-my-opencode-slim"
+  ],
+  "agent": {
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    }
+  },
+  "lsp": true
+}

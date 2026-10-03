@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.schema.json",
+  "mcp": {
+    "serena": {
+      "type": "stdio",
+      "command": "serena",
+      "args": ["start-mcp-server", "--project-from-cwd"]
+    },
+    "ripgrep": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["__AI_STACK_HOME__/platform/mcp/node_modules/mcp-ripgrep/dist/index.js"]
+    }
+  }
+}

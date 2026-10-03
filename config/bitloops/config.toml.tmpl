@@ -1,0 +1,37 @@
+[runtime]
+local_dev = false
+cli_version = "0.0.30"
+
+[stores]
+
+[stores.relational]
+sqlite_path = "__HOME__/.local/share/bitloops/stores/relational/relational.db"
+
+[stores.events]
+duckdb_path = "__HOME__/.local/share/bitloops/stores/event/events.duckdb"
+
+[stores.blob]
+local_path = "__HOME__/.local/share/bitloops/stores/blob"
+
+[logging]
+
+[telemetry]
+enabled = false
+
+[inference]
+
+[inference.runtimes]
+
+[inference.runtimes.bitloops_local_embeddings]
+command = "bitloops-local-embeddings"
+args = []
+startup_timeout_secs = 60
+request_timeout_secs = 300
+
+[inference.profiles]
+
+[inference.profiles.local_code]
+task = "embeddings"
+driver = "bitloops_embeddings_ipc"
+runtime = "bitloops_local_embeddings"
+model = "bge-m3"
